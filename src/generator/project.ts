@@ -46,15 +46,15 @@ export async function getProjectOptions({
       projectNoteMd = await readFile(fullPath, 'utf-8');
     } catch (e) {
       console.log(
-        `❌ Error: project note markdown file not found: ${fullPath}`
+        `❌ Error: project note markdown file not found: ${fullPath}`,
       );
     }
   }
 
   return {
-    name: projectName && `"${projectName}"`,
-    databaseType: projectDatabaseType || '',
-    note: projectNoteMd || projectNote || '', // noteMd takes precedence
+    name: (projectName && `"${projectName}"`) || '',
+    databaseType: (projectDatabaseType as string) || '',
+    note: (projectNoteMd as string) || (projectNote as string) || '', // noteMd takes precedence
     isMd: projectNoteMd !== '',
   };
 }

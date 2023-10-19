@@ -30,10 +30,10 @@ export async function generate(options: GeneratorOptions) {
       allowManyToMany,
       mapToDbSchema,
       includeRelationFields,
-      projectOptions
+      projectOptions,
     );
 
-    await writeFile(join(outputDir, dbmlFileName), dbmlSchema);
+    await writeFile(join(outputDir, dbmlFileName as string), dbmlSchema);
   } catch (e) {
     console.error('Error: unable to write files for Prisma DBML Generator');
     throw e;
