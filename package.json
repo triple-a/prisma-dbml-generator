@@ -6,6 +6,7 @@
     "prisma-dbml-generator": "./dist/generator.js"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc -p .",
     "dev:watch": "tsc -p . --watch",
     "dev": "tsc -p . && npm run prisma:generate",
