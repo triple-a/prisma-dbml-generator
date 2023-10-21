@@ -28,6 +28,10 @@
     "dbml",
     "generator"
   ],
+  "files": [
+    "dist",
+    "src"
+  ],
   "contributors": [
     {
       "name": "Marc Stammerjohann"
