@@ -2,7 +2,9 @@
   "name": "@triple-a/prisma-dbml-generator",
   "version": "0.11.4",
   "description": "Prisma DBML Generator",
-  "bin": "./dist/generator.js",
+  "bin": {
+    "prisma-dbml-generator": "./dist/generator.js"
+  },
   "scripts": {
     "build": "tsc -p .",
     "dev:watch": "tsc -p . --watch",
